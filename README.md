@@ -1,5 +1,12 @@
 # Message-board
 
+1. ember new message-board in desktop
+2. ember g model question, then add the properties including the 1-to-many
+3. ember g model answer, then do the same
+4. ember install emberfire
+5. created new project on Firebase, then added the apiKey and other URL's to environment.js
+6. created questions.json and uploaded it to Firebase
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 
@@ -50,4 +57,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
