@@ -1,27 +1,23 @@
 {{yield}}
-{{#if newFormShow}}
   <h1>New Question</h1>
   <div class="container">
     <form>
       <div class="form-group">
         <label for="author">Author:</label>
-        {{input value=author id="author"}}
+        {{input class="form-control" value=author id="author"}}
       </div>
 
       <div class="form-group">
         <label for="content">What's your question?</label>
-        {{input value=content id="content"}}
+        {{input  class="form-control" value=content id="content"}}
       </div>
 
       <div class="form-group">
         <label for="notes">Additional Notes:</label>
-        {{input value=notes id="notes"}}
+        {{input class="form-control" value=notes id="notes"}}
       </div>
 
       <button {{action 'submitQuestion'}}>Submit</button>
       <button {{action 'hideQuestionFormShow'}}>Hide Form</button>
     </form>
   </div>
-  {{else}}
-  <button class="btn btn-success"{{action 'newQuestionFormShow'}}>Ask New Question</button>
-{{/if}}

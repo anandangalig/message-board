@@ -15,7 +15,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         question: this.get('question')
       };
-      this.set('answerUpdateFormShowing', false);
+      this.set('updateFormShowing', false);
 
       //Clear the inputted values after they have been used via forEach loop:
       var self = this; //fixing the scope issue by creating this var outside of the forEach loop.
