@@ -1,8 +1,18 @@
 {{outlet}}
-<h1>Question Details: {{model.author}}</h1>
-{{delete-question question=model deleteThisQuestion="deleteThisQuestion"}}
+<div class="jumbotron container">
+  <h1>Question Details: </h1>
 
-<!--{{update-question question=model}}
+  <h4><em>Author:</em> {{model.author}}</h4>
+  <h4><em>Question:</em> {{model.content}}</h4>
+  <h4><em>Additional Notes:</em> {{model.notes}}</h4>
+
+  {{update-question question=model updateQuestion="updateQuestion"}}<hr>
+
+  {{delete-question question=model deleteThisQuestion="deleteThisQuestion"}}
+
+  <h4><em>Answers:</em></h4> {{#each model.answers as |answer|}}
+                      {{answer.author}} answered: {{answer.content}}
+                    {{/each}}
 
 
-{{answer-question question=model}}-->
+</div>

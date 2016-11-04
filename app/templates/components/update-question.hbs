@@ -1,1 +1,29 @@
 {{yield}}
+{{#if updateFormShowing}}
+
+  <hr><h4>Update/Edit this Question:</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="author">Author Name:</label>
+        {{input value=author id="author" placeholder=question.author}}
+      </div>
+
+      <div class="form-group">
+        <label for="content">Question Asked:</label>
+        {{input value=content id="content" placeholder=question.content}}
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Additional Notes</label>
+        {{input value=notes id="notes" placeholder=question.notes}}
+      </div>
+
+      <button class="btn btn-sm btn-primary"{{action 'updateQuestion' question}}>Save</button> <!--triggers the 'update' function with the current rental that was passed down from the #linkto tag with the ID-->
+      <button class="btn btn-sm btn-warning"{{action 'showUpdateFormHide'}}>Nevermind</button>
+    </form>
+  </div>
+
+{{else}}
+      <button class="btn btn-success"{{action 'showUpdateForm'}}>Update</button> <!--Shows the input form-->
+{{/if}}
