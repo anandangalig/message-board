@@ -10,9 +10,7 @@
 
   {{delete-question question=model deleteThisQuestion="deleteThisQuestion"}}
 
-  <h4><em>Answers:</em></h4> {{#each model.answers as |answer|}}
-                      {{answer.author}} answered: {{answer.content}}
-                    {{/each}}
-
-
+  <h4><em>Answers:</em></h4>
+    {{answer-detail question=model}}
+    {{new-answer question=model saveAnswer="saveAnswer"}}
 </div>
