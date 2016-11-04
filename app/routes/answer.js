@@ -15,8 +15,10 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     deleteAnswer(model) {
-      model.destroyRecord();
-      this.transitionTo('index');
+      if(confirm('Are you sure you want to delete this answer?')) {
+        model.destroyRecord();
+        this.transitionTo('index');
+      }
     }
   }
 });
