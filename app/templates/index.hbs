@@ -1,10 +1,10 @@
 {{outlet}}
-<h1>Answer a question. Help a friend.</h1>
-
-<ul>
-  {{#each model as |question|}}
-    {{question-tile question=question}}
-  {{/each}}
-</ul>
-
-{{new-question saveQuestion="saveQuestionInModel"}}
+<div class="container">
+  <h1>Answer a question. Help a friend.</h1>
+  <ul>
+    {{#each model as |question|}}
+      {{question-tile question=question}}
+    {{/each}}
+  </ul>
+  {{new-question saveQuestion="saveQuestionInModel"}}
+</div>
