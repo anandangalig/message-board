@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       });
 
       this.set('newAnswerFormShowing', false);//hides the input form
-      this.sendAction('saveAnswer', params); //send to rental with the params attached
+      this.sendAction('saveAnswer', params); //send to question with the params attached
     }
   }
 });

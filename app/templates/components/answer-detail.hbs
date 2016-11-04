@@ -1,4 +1,4 @@
 {{yield}}
 {{#each question.answers as |answer|}}
-  <li>{{#link-to 'answer' answer.id}}See {{answer.author}}'s answer{{/link-to}}</li>
+  <li>{{answer.author}} answered - {{#link-to 'answer' answer.id}}"{{answer.content}}"{{/link-to}}</li>
 {{/each}}

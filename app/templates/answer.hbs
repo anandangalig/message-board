@@ -1,6 +1,13 @@
 {{outlet}}
 <div class="jumbotron container">
   <h1>Answer Details:</h1>
-  {{answer-tile answer=model}}
-  {{update-answer answer=model}}
+  <div class="row">
+    <div class="col-sm-6">
+      {{answer-tile answer=model}}
+    </div>
+    <div class="col-sm-6">
+      {{update-answer answer=model updateAnswer="updateAnswer"}}
+    </div>
+  </div>
+  <button class="btn btn-danger" {{action 'deleteAnswer' model}}>Delete this Answer</button>
 </div>

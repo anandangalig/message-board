@@ -6,7 +6,12 @@ export default Ember.Route.extend({
   },
   actions: {
     deleteThisQuestion(question) {
-      question.destroyRecord();
+      var answer_deletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function() { //Ember.RSVP.all() can package many promises and wait for them.
+        return question.destroyRecord(); //promised callback function that deletes from Firebase
+      });
       this.transitionTo('index');
     },
     updateQuestion(question, params) {
