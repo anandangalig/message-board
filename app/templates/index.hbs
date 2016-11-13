@@ -9,6 +9,12 @@
             <li>{{question-popularity question}}{{question-tile question=question}}</li>
           {{/each}}
         </ul>
+        {{#if showFavorites}}
+        {{favorites-display}}
+        <button class="btn btn-warning" {{action 'hideFavoritesList'}}>Hide List</button>
+        {{else}}
+        <button class="btn btn-info" {{action 'showFavoritesList'}}>See My Favorites List</button>
+        {{/if}}
       </div>
     </div>
     <div class="col-sm-5">

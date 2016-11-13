@@ -1,0 +1,4 @@
+{{yield}}
+{{#each favoritesList.questions as |question|}}
+  <li><h3>"{{question.content}}" -  asked by {{question.author}}</h3></li>
+{{/each}}

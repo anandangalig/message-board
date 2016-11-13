@@ -1,5 +1,6 @@
 {{yield}}
   {{question.author}} asked {{#link-to 'question' question.id}}{{question.content}}{{/link-to}}
+  <button {{action 'addToList' question}}>Add to Favorites List</button>
   {{#if notesShowing}}
     <em><br>Notes: {{question.notes}}</em> <button {{action 'notesToggle'}}>Hide notes</button>
   {{else}}
