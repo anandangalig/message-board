@@ -1,7 +1,7 @@
 {{yield}}
-  <li>{{question.author}} asked {{#link-to 'question' question.id}}{{question.content}}{{/link-to}}
+  {{question.author}} asked {{#link-to 'question' question.id}}{{question.content}}{{/link-to}}
   {{#if notesShowing}}
     <em><br>Notes: {{question.notes}}</em> <button {{action 'notesToggle'}}>Hide notes</button>
   {{else}}
     <button {{action 'notesToggle'}}>Show notes</button>
-  {{/if}}</li>
+  {{/if}}

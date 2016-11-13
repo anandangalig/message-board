@@ -1,16 +1,20 @@
 {{outlet}}
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <h1>All Questions:</h1>
-      <ul>
-        {{#each model as |question|}}
-          {{question-tile question=question}}
-        {{/each}}
-      </ul>
+    <div class="col-sm-7">
+      <div class="container">
+        <h1>All Questions:</h1>
+        <ul>
+          {{#each model as |question|}}
+            <li>{{question-popularity question}}{{question-tile question=question}}</li>
+          {{/each}}
+        </ul>
+      </div>
     </div>
-    <div class="col-sm-6">
-        {{new-question saveQuestion="saveQuestionInModel"}}
+    <div class="col-sm-5">
+      <div class="container">
+          {{new-question saveQuestion="saveQuestionInModel"}}
+      </div>
     </div>
   </div>
 </div>

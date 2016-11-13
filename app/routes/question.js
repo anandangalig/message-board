@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model(parameters) {
     return this.store.findRecord('question', parameters.question_id);
   },
+  
   actions: {
     deleteThisQuestion(question) {
       if(confirm('All answers belonging to it will be lost as well. Are you sure you want to delete this question?')) {
