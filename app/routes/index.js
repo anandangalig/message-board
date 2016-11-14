@@ -12,19 +12,19 @@ export default Ember.Route.extend({
       newQuestion.save();
       this.transitionTo('index');
     },
-    // notesToggle: function() {
-    //   var stateOfNotes = this.get('notesShowing');
-    //   this.set('notesShowing', !stateOfNotes);
-    // },
+
     showFavoritesList: function() {
       var stateOfList = this.get('showFavorites');
+      console.log(stateOfList);
       this.set('showFavorites', !stateOfList);
       console.log(this.get('showFavorites'));
     },
 
     hideFavoritesList: function() {
       var stateOfList = this.get('showFavorites');
+      console.log(stateOfList);
       this.set('showFavorites', !stateOfList);
+      console.log(this.get('showFavorites'));
     }
   }
 });

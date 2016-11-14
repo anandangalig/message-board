@@ -9,11 +9,12 @@
             <li>{{question-popularity question}}{{question-tile question=question}}</li>
           {{/each}}
         </ul>
-        {{#if showFavorites}}
-        {{favorites-display}}
-        <button class="btn btn-warning" {{action 'hideFavoritesList'}}>Hide List</button>
+        {{#if 'showFavorites'}} <!--WHYYYY? '' and else is not showing up!-->
+          {{favorites-display}}
+          <button class="btn btn-warning" {{action 'hideFavoritesList'}}>Hide List</button>
         {{else}}
-        <button class="btn btn-info" {{action 'showFavoritesList'}}>See My Favorites List</button>
+          <h1>test</h1>
+          <button class="btn btn-info" {{action 'showFavoritesList'}}>Show Favorites List</button>
         {{/if}}
       </div>
     </div>
