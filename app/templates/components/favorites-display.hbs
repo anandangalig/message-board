@@ -1,5 +1,11 @@
 {{yield}}
+{{#if showFavorites}}
 <h3>Saved Questions in Favorites List:</h3>
-{{#each favoritesList.questions as |question|}}
-  <li>"{{question.content}}" -  asked by {{question.author}}</li>
-{{/each}}
+  {{#each favoritesList.questions as |question|}}
+    <li>"{{question.content}}" -  asked by {{question.author}}</li>
+  {{/each}}
+  <button class="btn btn-warning" {{action 'hideFavoritesList'}}>Hide List</button>
+{{else}}
+  <button class="btn btn-info" {{action 'showFavoritesList'}}>Show Favorites List</button>
+{{/if}}
+
